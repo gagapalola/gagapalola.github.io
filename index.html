@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/body-preset.css">
     <link rel="stylesheet" href="css/nav_menu.css">
     <link rel="stylesheet" href="css/dropDownMenu.css">
+    <link rel="stylesheet" href="css/swiperImg.css">
     <title>F7Days-PlayerSide</title>
 
     <style>
@@ -29,6 +30,26 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+
+        .imgCover {
+            width: 100%;
+            height: calc(1080/1920 * 1200px);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 200px 300px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 20px;
+            text-shadow: 1px 1px black;
+            float: left;
+        }
+
+        .worldSetImg {
+            width: 100%;
+            height: calc(1080/1920 * 1200px);
+            background-image: url("/img/antoline.jpg");
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
@@ -81,52 +102,114 @@
             <div id="muteYouTubeVideoPlayer" class="youtube"></div>
         </div>
     </div>
-    <!-- Youtube -->
+    <!-- Youtube END -->
+
+    <div class="gap-h30"></div>
+
+    <div class="container">
+        <div class="gap-h30"></div>
+        <div class="title">世界觀</div>
+        <div class="gap-h30"></div>
+        <div class="worldSet">
+            <div class="imgCover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis necessitatibus, fugit, sit fugiat
+                    beatae veritatis nulla doloremque maiores aspernatur, ex praesentium. Est reiciendis harum totam fugit dolorem
+                    a tempore.</div>
+            <div class="worldSetImg"></div>
+        </div>
+        <div class="gap-h60"></div>
+        <div class="container">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slideImg1"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slideImg2"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slideImg3"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slideImg4"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slideImg5"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slideImg6"></div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+        </div>
 
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-    <script>
-        var mySwiper = new Swiper('.swiper-container');
-    </script>
-
-
-    <!-- Youtube-set -->
-    <script async src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        function onYouTubeIframeAPIReady() {
-            var player;
-            player = new YT.Player('muteYouTubeVideoPlayer', {
-                videoId: 'zFXofy5Ur5U', // YouTube 影片ID
-                playerVars: {
-                    autoplay: 1, // 在讀取時自動播放影片
-                    controls: 0, // 在播放器顯示暫停／播放按鈕
-                    showinfo: 0, // 隱藏影片標題
-                    modestbranding: 0, // 隱藏YouTube Logo
-                    loop: 1, // 讓影片循環播放
-                    fs: 0, // 隱藏全螢幕按鈕
-                    cc_load_policty: 0, // 隱藏字幕
-                    iv_load_policy: 3, // 隱藏影片註解
-                    autohide: 0, // 當播放影片時隱藏影片控制列
-                    wmode: "opaque" //讓YOUTUBE不要擋住東西  目前無效
+        <!-- ↓ javascript ↓ -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
                 },
-                events: {
-                    onReady: function (e) {
-                        e.target.setVolume(30) //設定音量
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+
+
+        <!-- Youtube-set -->
+        <script async src="https://www.youtube.com/iframe_api"></script>
+        <script>
+            function onYouTubeIframeAPIReady() {
+                var player;
+                player = new YT.Player('muteYouTubeVideoPlayer', {
+                    videoId: 'zFXofy5Ur5U', // YouTube 影片ID
+                    playerVars: {
+
+                        autoplay: 0, // 在讀取時自動播放影片
+                        controls: 0, // 在播放器顯示暫停／播放按鈕
+                        showinfo: 0, // 隱藏影片標題
+                        modestbranding: 0, // 隱藏YouTube Logo
+                        loop: 1, // 讓影片循環播放
+                        fs: 0, // 隱藏全螢幕按鈕
+                        cc_load_policty: 0, // 隱藏字幕
+                        iv_load_policy: 3, // 隱藏影片註解
+                        autohide: 0, // 當播放影片時隱藏影片控制列
+                        wmode: "opaque" //讓YOUTUBE不要擋住東西  目前無效
                     },
-                    onStateChange: function (e) {
-                        if (e.data === YT.PlayerState.ENDED) {
-                            player.playVideo();//影片LOOP無效時，靠這個才能重播
+                    events: {
+                        onReady: function (e) {
+                            e.target.setVolume(30) //設定音量
+                        },
+
+                        onStateChange: function (e) {
+                            if (e.data === YT.PlayerState.ENDED) {
+                                player.playVideo(); //影片LOOP無效時，靠這個才能重播
+                            }
                         }
                     }
-                }
-            });
-        }
-        // Written by @labnol
-    </script>
-    <!-- Youtube-set -->
+                });
+            }
+            // Written by @labnol
+        </script>
+        <!-- Youtube-set-end -->
 
 
 </body>

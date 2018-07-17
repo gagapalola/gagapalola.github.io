@@ -1,0 +1,77 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.slideImg1 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/lulu.jpg");
+}
+
+.slideImg1 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/lulu.jpg");
+}
+
+.slideImg2 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/mila.jpg");
+}
+.slideImg3 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/top.jpg");
+}
+.slideImg4 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/uto.jpg");
+}
+.slideImg5 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/wordline.jpg");
+}
+.slideImg6 {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/heroline.jpg");
+}

@@ -8,6 +8,7 @@
 	position: fixed;
 	right: calc(50% - 600px);
 	top: 0;
+	z-index: 1;
 }
 .dropdown-list{
 	background-color: #455A64;
