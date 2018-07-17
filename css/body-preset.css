@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	padding:0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+li{
+	display: inline-block;
+}
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+}
