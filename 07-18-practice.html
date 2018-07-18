@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>boorstrap_swiper_practice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <style>
+        body {
+
+            font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+            padding-top:56px; 
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .bannerImg {
+            width: 100%;
+            height: calc(50vh - 60px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .img_1 {
+            background-image: url("/img/lulu.jpg");
+        }
+
+        .img_2 {
+            background-image: url("/img/mila.jpg");
+        }
+
+        .img_3 {
+            background-image: url("/img/uto.jpg");
+        }
+
+        .img_4 {
+            background-image: url("/img/top.jpg");
+        }
+
+        .img_5 {
+            background-image: url("/img/antoline.jpg");
+        }
+
+        #slcard {
+            padding: 40px 22px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align:center;
+            padding: 10px;
+        }
+        #logo{
+            transition: 0.5s;
+        }
+        .bigg{
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" id="logo" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAV END -->
+    <!-- first-slbanner -->
+    <div class="container">
+        <!-- Swiper -->
+        <div class="swiper-container" id="slbanner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bannerImg img_1"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bannerImg img_2"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bannerImg img_3"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bannerImg img_4"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bannerImg img_5"></div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- first-slbanner END -->
+    <div class="py-3"></div>
+    <!-- second-slcard -->
+    <div class="container">
+        <div class="row text-center justify-content-center">
+            <div class="col-12 col-xl-5 col-md-8">
+                <div class="py-3"></div>
+                <h1>你好阿旅行者</h1>
+                <div class="py-3"></div>
+                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ipsa harum commodi ex non iste? Vitae molestiae
+                    recusandae obcaecati? Voluptate impedit sed voluptatem quisquam? Veniam ut eligendi dicta ab fuga.</div>
+            </div>
+        </div>
+    </div>
+    <div class="py-3"></div>
+    <div class="container">
+        <!-- Swiper -->
+        <div class="swiper-container" id="slcard">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slcard">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slcard">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slcard">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slcard">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slcard">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- second-slcard END-->
+    <div class="py-3"></div>
+    <div class="container">
+            <div class="py-3"></div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-5 col-md">
+                <img class="img-fluid" src="/img/interface.jpg" alt="">
+            </div>
+            <div class="col-12 col-xl-5 col-md">
+                <h1>隆來拉!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui delectus tenetur quam nisi, dolores
+                esse aperiam similique nulla temporibus necessitatibus quasi laboriosam, nemo earum quos hic repellat minus,
+                </div>
+        </div>
+        <div class="py-3"></div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-5 col-md order-2 order-xl-1 order-lg-1 order-md-1">
+                <h1>隆來拉!</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui delectus tenetur quam nisi, dolores
+                esse aperiam similique nulla temporibus necessitatibus quasi laboriosam, nemo earum quos hic repellat minus,
+                </div>
+            <div class="col-12 col-xl-5 col-md order-1 order-xl-2 order-lg-2 order-md-2">
+                <img class="img-fluid" src="/img/interface.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <footer>歡迎抄襲</footer>
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script>
+        var slbanner = new Swiper('#slbanner', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var slcard = new Swiper('#slcard', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+        $(window).scroll(function(){
+            var scorll = $(window).scrollTop();
+            console.log("安安:" + scorll );
+            if(scorll > 200){
+                $("#logo").addClass("bigg");
+            }else{
+                $("#logo").removeClass("bigg");
+            }
+        });
+    </script>
+</body>
+
+</html>
