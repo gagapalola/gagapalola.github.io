@@ -16,7 +16,7 @@
 
         .embed {
             position: relative;
-            height: calc(100vh - 60px);
+            height: 100vh;
             width: 100%;
         }
 
@@ -38,6 +38,10 @@
             font-size: 20px;
             text-shadow: 1px 1px black;
             float: left;
+        }
+        #swPadd{
+            padding: 39px;
+            box-sizing: border-box;
         }
 
         .worldSetImg {
@@ -101,9 +105,7 @@
     <div class="gap-h30"></div>
 
     <div class="container">
-        <div class="gap-h30"></div>
-        <div class="title">世界觀</div>
-        <div class="gap-h30"></div>
+        <div class="gap-h60"></div>
         <div class="worldSet">
             <div class="imgCover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis necessitatibus, fugit, sit fugiat
                     beatae veritatis nulla doloremque maiores aspernatur, ex praesentium. Est reiciendis harum totam fugit dolorem
@@ -113,7 +115,7 @@
         <div class="gap-h60"></div>
         <div class="container">
             <!-- Swiper -->
-            <div class="swiper-container">
+            <div class="swiper-container" id="swPadd" >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slideImg1"></div>
@@ -142,15 +144,17 @@
             </div>
 
         </div>
-
-
+        <div class="gap-h60"></div>
+        <!-- 內容 -->
+        <div class="container"></div>
+        <!-- 內容 -->
         <!-- ↓ javascript ↓ -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
         <script>
             var mySwiper = new Swiper('.swiper-container', {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 40,
                 loop: true,
                 autoplay: {
                     delay: 3000,
