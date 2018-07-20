@@ -6,8 +6,8 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	position: fixed;
-	right: calc(50% - 600px);
-	top: 0;
+	right: calc(15% - 80px);
+	top: 2%;
 	z-index: 1;
 }
 .dropdown-list{

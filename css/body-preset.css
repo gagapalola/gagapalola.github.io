@@ -27,7 +27,6 @@ a{
 }
 .containerFull{
 	width: 100%;
-	padding: 0 15px;
 	box-sizing: border-box;
 	position: relative;
 
@@ -46,6 +45,15 @@ a{
 .box-6{
 	width: calc(50% - 30px );
 	height: 240px ;
+	position: relative;
+	float: left;
+	padding: 0 15px;
+}
+.hide{
+	display: none;
+}
+.box-4{
+	width: calc(100%/3 - 30px );
 	position: relative;
 	float: left;
 	padding: 0 15px;

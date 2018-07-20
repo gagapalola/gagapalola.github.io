@@ -23,47 +23,28 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
-.slideImg1 {
+.slideImg{
   width: 100%;
   height: calc(9/16 * 390px);
   background-size: cover;
   background-position: center;
+}
+.slideImg1 {
   background-image: url("/img/lulu.jpg");
 }
 
 .slideImg2 {
-  width: 100%;
-  height: calc(9/16 * 390px);
-  background-size: cover;
-  background-position: center;
   background-image: url("/img/mila.jpg");
 }
 .slideImg3 {
-  width: 100%;
-  height: calc(9/16 * 390px);
-  background-size: cover;
-  background-position: center;
   background-image: url("/img/top.jpg");
 }
 .slideImg4 {
-  width: 100%;
-  height: calc(9/16 * 390px);
-  background-size: cover;
-  background-position: center;
   background-image: url("/img/uto.jpg");
 }
 .slideImg5 {
-  width: 100%;
-  height: calc(9/16 * 390px);
-  background-size: cover;
-  background-position: center;
   background-image: url("/img/wordline.jpg");
 }
 .slideImg6 {
-  width: 100%;
-  height: calc(9/16 * 390px);;
-  background-size: cover;
-  background-position: center;
   background-image: url("/img/heroline.jpg");
 }

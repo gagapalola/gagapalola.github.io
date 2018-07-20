@@ -31,7 +31,7 @@
             width: 100%;
             height: calc(9/16 * 1080px);
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 25% 15%;
+            padding: 20% 15%;
             box-sizing: border-box;
             color: white;
             font-size: 20px;
@@ -56,26 +56,124 @@
         .cImg1 {
             width: 100%;
             height: 100%;
-            background-size: cover;
+            background-size: contain;
             background-image: url("/img/interface.jpg");
         }
-        .cBtn{
+
+        .cBtn {
             position: absolute;
-            right: 0;
+            right: 15px;
             bottom: 0;
         }
-        footer{
-            background-color: rgba(255,255,255,0.1);
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.1);
             width: 100%;
             margin-top: 30px;
             height: 40px;
             line-height: 40px;
             text-align: center;
         }
+
+        .card-img-top {
+            width: 100%;
+        }
+
+        .uBtn {
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+        }
+
+        .door {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .doorL {
+            width: 50%;
+            height: 100vh;
+            background-color: black;
+            float: left;
+        }
+
+        .doorR {
+            width: 50%;
+            height: 100vh;
+            background-color: black;
+            float: left;
+        }
+
+        .logoC {
+            width: 20vh;
+            height: 20vh;
+            background-size: cover;
+            background-image: url("/img/menu.png");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: calc(50% - 10vh);
+            left: calc(50% - 10vh);
+            opacity: 1;
+        }
+        .logoCov {
+            width: 20vh;
+            height: 20vh;
+            background-size: cover;
+            background-image: url("/img/menu.png");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: calc(50% - 10vh);
+            left: calc(50% - 10vh);
+            animation: logoAct 2s infinite;
+        }
+        .logotext{
+            position: absolute;
+            font-size: 30px;
+            bottom: 30%;
+            left: calc(50% - 140px);
+        }
+        .spann {
+            transition: 3s;
+            transform: rotate(180deg);
+        }
+
+        .outL {
+            transition-delay: 2s;
+            transition: 5s;
+            transform: translateX(-100%);
+        }
+
+        .outR {
+            transition-delay: 2s;
+            transition: 5s;
+            transform: translateX(100%);
+        }
+
+        .logodown {
+            transition: 1s;
+            opacity: 0;
+        }
+        @keyframes logoAct {
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="door">
+        <div class="doorL"></div>
+        <div class="doorR"></div>
+        <div class="logoC"></div>
+        <div class="logoCov"></div>
+        <div class="logotext">↑ 進入七日的世界吧 ↑</div>
+        <div class="clear"></div>
+    </div>
     <!-- NAV START -->
     <nav class="nav">
         <div class="container">
@@ -139,22 +237,22 @@
             <div class="swiper-container" id="swPadd">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slideImg1"></div>
+                        <div class="slideImg slideImg1"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slideImg2"></div>
+                        <div class="slideImg slideImg2"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slideImg3"></div>
+                        <div class="slideImg slideImg3"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slideImg4"></div>
+                        <div class="slideImg slideImg4"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slideImg5"></div>
+                        <div class="slideImg slideImg5"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slideImg6"></div>
+                        <div class="slideImg slideImg6"></div>
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -185,90 +283,132 @@
         <div class="gap-h30"></div>
 
         <div class="containerFull">
-                <div class="box-6">
-                    <div class="cText">
-                        <h1 class="cTitle">你再說一次試試看</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
-                        et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
-                    </div>
-                    <button class="btn cBtn">按看看阿</button>
+            <div class="box-6">
+                <div class="cText">
+                    <h1 class="cTitle">你再說一次試試看</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
+                    et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
                 </div>
-                <div class="box-6">
-                        <div class="cImg1"></div>
-                    </div>
-                <div class="clear"></div>
+                <button class="btn cBtn">按看看阿</button>
             </div>
+            <div class="box-6">
+                <div class="cImg1"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="gap-h60"></div>
+        <div class="containerFull">
+            <div class="box-4">
+                <div class="card">
+                    <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn uBtn">按看看阿</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="card">
+                    <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn uBtn">按看看阿</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="card">
+                    <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn uBtn">按看看阿</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="gap-h30"></div>
+        <div class="containerFull">
+            <div class="box-4">
+                <div class="card">
+                    <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn uBtn">按看看阿</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="card">
+                    <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn uBtn">按看看阿</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="card">
+                    <img class="card-img-top" src="/img/gogo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn uBtn">按看看阿</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
     </div>
-        <!-- 內容 -->
+    <!-- 內容 -->
 
 
 
 
 
 
-        
+
+
     <footer>記者來抄阿</footer>
-        <!-- ↓ javascript ↓ -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-        <script>
-            var mySwiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                spaceBetween: 40,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
+    <!-- ↓ javascript ↓ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script src="/js/youtube.js">
+    </script>
 
+    <script>
+        $(window).scroll(function () {
+            var winScr = $(window).scrollTop();
+            console.log(winScr);
 
-        <!-- Youtube-set -->
-        <script async src="https://www.youtube.com/iframe_api"></script>
-        <script>
-            function onYouTubeIframeAPIReady() {
-                var player;
-                player = new YT.Player('muteYouTubeVideoPlayer', {
-                    videoId: 'zFXofy5Ur5U', // YouTube 影片ID
-                    playerVars: {
-
-                        autoplay: 0, // 在讀取時自動播放影片
-                        controls: 0, // 在播放器顯示暫停／播放按鈕
-                        showinfo: 0, // 隱藏影片標題
-                        modestbranding: 0, // 隱藏YouTube Logo
-                        loop: 1, // 讓影片循環播放
-                        fs: 0, // 隱藏全螢幕按鈕
-                        cc_load_policty: 0, // 隱藏字幕
-                        iv_load_policy: 3, // 隱藏影片註解
-                        autohide: 0, // 當播放影片時隱藏影片控制列
-                        wmode: "opaque" //讓YOUTUBE不要擋住東西
-                    },
-                    events: {
-                        onReady: function (e) {
-                            e.target.setVolume(30) //設定音量
-                        },
-
-                        onStateChange: function (e) {
-                            if (e.data === YT.PlayerState.ENDED) {
-                                player.playVideo(); //影片LOOP無效時，靠這個才能重播
-                            }
-                        }
-                    }
-                });
+            if (winScr < 1000) {
+                $(".menu-dropdown").addClass("hide");
+            } else {
+                $(".menu-dropdown").removeClass("hide");
             }
-            // Written by @labnol
-        </script>
-        <!-- Youtube-set-end -->
 
+        });
+    </script>
+    <script>
+        $(".logoCov").click(function () {
+            $(".logoCov").hide();
+            $(".logoC").addClass("spann");
+            $(".doorL").addClass("outL");
+            $(".doorR").addClass("outR");
+            $(".logotext").hide();
+
+            setTimeout(function () {
+                $(".logoC").addClass("logodown");
+            }, 2000);
+            setTimeout(function () {
+                $(".door").hide()
+            }, 5000);
+
+        });
+    </script>
 
 </body>
 
