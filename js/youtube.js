@@ -4,7 +4,7 @@ function onYouTubeIframeAPIReady() {
         videoId: 'zFXofy5Ur5U', // YouTube 影片ID
         playerVars: {
 
-            autoplay: 0, // 在讀取時自動播放影片
+            autoplay: 1, // 在讀取時自動播放影片
             controls: 0, // 在播放器顯示暫停／播放按鈕
             showinfo: 0, // 隱藏影片標題
             modestbranding: 0, // 隱藏YouTube Logo
