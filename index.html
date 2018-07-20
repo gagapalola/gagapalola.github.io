@@ -13,7 +13,6 @@
     <title>F7Days-PlayerSide</title>
 
     <style>
-
         .embed {
             position: relative;
             height: 100vh;
@@ -30,26 +29,48 @@
 
         .imgCover {
             width: 100%;
-            height: calc(1080/1920 * 1200px);
+            height: calc(9/16 * 1080px);
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 200px 300px;
+            padding: 25% 15%;
             box-sizing: border-box;
             color: white;
             font-size: 20px;
             text-shadow: 1px 1px black;
             float: left;
+            overflow: hidden;
         }
-        #swPadd{
-            padding: 39px;
+
+        #swPadd {
+            padding: 39px 0;
             box-sizing: border-box;
         }
 
         .worldSetImg {
             width: 100%;
-            height: calc(1080/1920 * 1200px);
+            height: calc(9/16 * 1080px);
             background-image: url("/img/antoline.jpg");
             background-size: cover;
             background-position: center;
+        }
+
+        .cImg1 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-image: url("/img/interface.jpg");
+        }
+        .cBtn{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        footer{
+            background-color: rgba(255,255,255,0.1);
+            width: 100%;
+            margin-top: 30px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
         }
     </style>
 </head>
@@ -97,9 +118,9 @@
     </nav>
     <!-- NAV END -->
     <!-- Youtube -->
-        <div class="embed">
-            <div id="muteYouTubeVideoPlayer" class="youtube"></div>
-        </div>
+    <div class="embed">
+        <div id="muteYouTubeVideoPlayer" class="youtube"></div>
+    </div>
     <!-- Youtube END -->
 
     <div class="gap-h30"></div>
@@ -108,14 +129,14 @@
         <div class="gap-h60"></div>
         <div class="worldSet">
             <div class="imgCover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis necessitatibus, fugit, sit fugiat
-                    beatae veritatis nulla doloremque maiores aspernatur, ex praesentium. Est reiciendis harum totam fugit dolorem
-                    a tempore.</div>
+                beatae veritatis nulla doloremque maiores aspernatur, ex praesentium. Est reiciendis harum totam fugit dolorem
+                a tempore.</div>
             <div class="worldSetImg"></div>
         </div>
         <div class="gap-h60"></div>
-        <div class="container">
-            <!-- Swiper -->
-            <div class="swiper-container" id="swPadd" >
+        <!-- Swiper -->
+        <div class="containerFull">
+            <div class="swiper-container" id="swPadd">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slideImg1"></div>
@@ -146,8 +167,47 @@
         </div>
         <div class="gap-h60"></div>
         <!-- 內容 -->
-        <div class="container"></div>
+        <div class="containerFull">
+            <div class="box-6">
+                <div class="cImg1"></div>
+            </div>
+            <div class="box-6">
+                <div class="cText">
+                    <h1 class="cTitle">你再說一次試試看</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
+                    et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
+                </div>
+                <button class="btn cBtn">按看看阿</button>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="gap-h30"></div>
+
+        <div class="containerFull">
+                <div class="box-6">
+                    <div class="cText">
+                        <h1 class="cTitle">你再說一次試試看</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
+                        et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
+                    </div>
+                    <button class="btn cBtn">按看看阿</button>
+                </div>
+                <div class="box-6">
+                        <div class="cImg1"></div>
+                    </div>
+                <div class="clear"></div>
+            </div>
+    </div>
         <!-- 內容 -->
+
+
+
+
+
+
+        
+    <footer>記者來抄阿</footer>
         <!-- ↓ javascript ↓ -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
