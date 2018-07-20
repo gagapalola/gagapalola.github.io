@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="css/body-preset.css">
     <link rel="stylesheet" href="css/nav_menu.css">
     <link rel="stylesheet" href="css/dropDownMenu.css">
     <link rel="stylesheet" href="css/swiperImg.css">
+    <link rel="stylesheet" href="css/door.css">
     <title>F7Days-PlayerSide</title>
 
     <style>
@@ -62,12 +64,6 @@
             background-repeat: no-repeat;
         }
 
-        .cBtn {
-            position: absolute;
-            right: 15px;
-            bottom: 0;
-        }
-
         footer {
             background-color: rgba(255, 255, 255, 0.1);
             width: 100%;
@@ -80,92 +76,16 @@
         .card-img-top {
             width: 100%;
         }
-
-        .uBtn {
+        .mdBoxbtn{
+            background-image: url("img/gogo-click.png");
+            height: 40px;
+            width: 120px;
+            background-size: contain;
+            background-repeat: no-repeat;
             position: absolute;
-            right: 15px;
+            right: 20px;
             bottom: 0;
-        }
-
-        .door {
-            width: 100%;
-            position: absolute;
-            z-index: 2;
-            overflow: hidden;
-        }
-
-        .doorL {
-            width: 50%;
-            height: 100vh;
-            background-color: black;
-            float: left;
-        }
-
-        .doorR {
-            width: 50%;
-            height: 100vh;
-            background-color: black;
-            float: left;
-        }
-
-        .logoC {
-            width: 20vh;
-            height: 20vh;
-            background-size: cover;
-            background-image: url("img/menu.png");
-            background-repeat: no-repeat;
-            position: absolute;
-            top: calc(50% - 10vh);
-            left: calc(50% - 10vh);
-            opacity: 1;
-        }
-
-        .logoCov {
-            width: 20vh;
-            height: 20vh;
-            background-size: cover;
-            background-image: url("img/menu.png");
-            background-repeat: no-repeat;
-            position: absolute;
-            top: calc(50% - 10vh);
-            left: calc(50% - 10vh);
-            animation: logoAct 2s infinite;
-        }
-
-        .logotext {
-            position: absolute;
-            font-size: 30px;
-            bottom: 30%;
-            left: calc(50% - 140px);
-        }
-
-        .spann {
-            transition: 1.5s;
-            transform: rotate(180deg);
-        }
-
-        .outL {
-            transition: 5s;
-            transform: translateX(-100%);
-        }
-
-        .outR {
-            transition: 5s;
-            transform: translateX(100%);
-        }
-
-        .logodown {
-            transition: 1s;
-            opacity: 0;
-        }
-
-        @keyframes logoAct {
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
+            
         }
     </style>
 </head>
@@ -226,6 +146,7 @@
     </div>
     <!-- Youtube END -->
 
+    <!-- 內容 -->
     <div class="gap-h30"></div>
 
     <div class="container">
@@ -280,7 +201,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
                     et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
                 </div>
-                <button class="btn cBtn">按看看阿</button>
+                <a href="#userUIdemo" rel="modal:open"class="mdBoxbtn"></a>
             </div>
             <div class="clear"></div>
         </div>
@@ -294,7 +215,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
                     et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
                 </div>
-                <button class="btn cBtn">按看看阿</button>
+                <a href="#fightUIdemo" rel="modal:open"class="mdBoxbtn"></a>
             </div>
             <div class="box-6">
                 <div class="cImg1"></div>
@@ -308,7 +229,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button class="btn uBtn">按看看阿</button>
+                        <a href="#cardBox1" rel="modal:open"class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -317,7 +238,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button class="btn uBtn">按看看阿</button>
+                        <a href="#cardBox2" rel="modal:open"class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -326,7 +247,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button class="btn uBtn">按看看阿</button>
+                        <a href="#cardBox3" rel="modal:open"class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -339,7 +260,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button class="btn uBtn">按看看阿</button>
+                        <a href="#cardBox4" rel="modal:open"class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -348,7 +269,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button class="btn uBtn">按看看阿</button>
+                        <a href="#cardBox5" rel="modal:open"class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -357,7 +278,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button class="btn uBtn">按看看阿</button>
+                        <a href="#cardBox6" rel="modal:open"class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -367,15 +288,20 @@
 
     </div>
     <!-- 內容 -->
-
-
-
-
-
-
-
-
     <footer>記者來抄阿</footer>
+
+
+    <!-- MODAL BOX -->
+    <form id="userUIdemo" class="modal"></form>
+    <form id="fightUIdemo" class="modal"></form>
+    <form id="cardBox1" class="modal"></form>
+    <form id="cardBox2" class="modal"></form>
+    <form id="cardBox3" class="modal"></form>
+    <form id="cardBox4" class="modal"></form>
+    <form id="cardBox5" class="modal"></form>
+    <form id="cardBox6" class="modal"></form>
+
+
     <!-- ↓ javascript ↓ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
@@ -383,6 +309,7 @@
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script src="/js/youtube.js">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <script>
         $(window).scroll(function () {
@@ -415,6 +342,7 @@
 
         });
     </script>
+
 
 </body>
 

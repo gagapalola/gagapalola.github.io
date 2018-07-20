@@ -1,0 +1,80 @@
+.door {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.doorL {
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    float: left;
+}
+
+.doorR {
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    float: left;
+}
+
+.logoC {
+    width: 20vh;
+    height: 20vh;
+    background-size: cover;
+    background-image: url("../img/menu.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50% - 10vh);
+    left: calc(50% - 10vh);
+    opacity: 1;
+}
+
+.logoCov {
+    width: 20vh;
+    height: 20vh;
+    background-size: cover;
+    background-image: url("../img/menu.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50% - 10vh);
+    left: calc(50% - 10vh);
+    animation: logoAct 2s infinite;
+}
+
+.logotext {
+    position: absolute;
+    font-size: 30px;
+    bottom: 30%;
+    left: calc(50% - 140px);
+}
+
+.spann {
+    transition: 1.5s;
+    transform: rotate(180deg);
+}
+
+.outL {
+    transition: 5s;
+    transform: translateX(-100%);
+}
+
+.outR {
+    transition: 5s;
+    transform: translateX(100%);
+}
+
+.logodown {
+    transition: 1s;
+    opacity: 0;
+}
+
+@keyframes logoAct {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
