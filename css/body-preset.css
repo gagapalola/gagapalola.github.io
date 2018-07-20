@@ -48,6 +48,7 @@ a{
 	position: relative;
 	float: left;
 	padding: 0 15px;
+	overflow: hidden;
 }
 .hide{
 	display: none;
@@ -57,4 +58,5 @@ a{
 	position: relative;
 	float: left;
 	padding: 0 15px;
+	overflow: hidden;
 }
