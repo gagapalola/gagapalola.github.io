@@ -76,7 +76,8 @@
         .card-img-top {
             width: 100%;
         }
-        .mdBoxbtn{
+
+        .mdBoxbtn {
             background-image: url("img/gogo-click.png");
             height: 40px;
             width: 120px;
@@ -85,8 +86,56 @@
             position: absolute;
             right: 20px;
             bottom: 0;
-            
+
         }
+        .dropdownmenuimg {
+            background-image: url("img/logo-white.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            left: -60px;
+            top: 20px;
+            z-index: 3;
+            cursor: pointer;
+        }
+        .dorpdownul{
+            position: absolute;
+            width: 250px;
+            text-align: center;
+            line-height: 80px;
+            top: 85px;
+            left: 15px;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+        .dorpdownlist{
+            height: 80px;
+            padding: 0 calc((250px - 89.83px)/2);
+            background-color: rgba(0, 255, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        /* .DrListPosition2 {
+            top: 165px;
+        }
+
+        .DrListPosition3 {
+            top: 245px;
+        }
+
+        .DrListPosition4 {
+            top: 325px;
+        }
+
+        .DrListPosition5 {
+            top: 405px;
+        }
+
+        .DrListPosition6 {
+            top: 485px;
+        } */
     </style>
 </head>
 
@@ -99,52 +148,21 @@
         <div class="logotext">↑ 進入七日的世界吧 ↑</div>
         <div class="clear"></div>
     </div>
-    <!-- NAV START -->
-    <nav class="nav">
-        <div class="container">
-            <a class="logo" href="#">
-                <img src="img/logo.png" alt="" height="60px">
-            </a>
-            <ul class="menu">
-                <li class="list">
-                    <a href="">遊戲介紹</a>
-                </li>
-                <li class="list">
-                    <a href="">角色一覽</a>
-                </li>
-                <li class="list">
-                    <a href="">裝備相關</a>
-                </li>
-                <li class="list">
-                    <a href="">線路攻略</a>
-                </li>
-            </ul>
-            <div class="clear"></div>
-        </div>
-        <ul class="menu-dropdown">
-            <a class="dropdown-list" href="">
-                <li>首頁</li>
-            </a>
-            <a class="dropdown-list" href="">
-                <li>遊戲介紹</li>
-            </a>
-            <a class="dropdown-list" href="">
-                <li>角色一覽</li>
-            </a>
-            <a class="dropdown-list" href="">
-                <li>裝備相關</li>
-            </a>
-            <a class="dropdown-list" href="">
-                <li>線路攻略</li>
-            </a>
-        </ul>
-    </nav>
-    <!-- NAV END -->
     <!-- Youtube -->
     <div class="embed">
         <div id="muteYouTubeVideoPlayer" class="youtube"></div>
     </div>
     <!-- Youtube END -->
+    <!-- dropdownmenu -->
+        <div class="dropdownmenuimg"></div>
+        <div class="dorpdownul">
+            <a href="" class="dorpdownlist DrListPosition1">dorpdownlist</a>
+            <a href="" class="dorpdownlist DrListPosition2">dorpdownlist</a>
+            <a href="" class="dorpdownlist DrListPosition3">dorpdownlist</a>
+            <a href="" class="dorpdownlist DrListPosition4">dorpdownlist</a>
+            <a href="" class="dorpdownlist DrListPosition5">dorpdownlist</a>
+            <a href="" class="dorpdownlist DrListPosition6">dorpdownlist</a>
+        </div>
 
     <!-- 內容 -->
     <div class="gap-h30"></div>
@@ -201,7 +219,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
                     et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
                 </div>
-                <a href="#userUIdemo" rel="modal:open"class="mdBoxbtn"></a>
+                <a href="#userUIdemo" rel="modal:open" class="mdBoxbtn"></a>
             </div>
             <div class="clear"></div>
         </div>
@@ -215,7 +233,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
                     et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
                 </div>
-                <a href="#fightUIdemo" rel="modal:open"class="mdBoxbtn"></a>
+                <a href="#fightUIdemo" rel="modal:open" class="mdBoxbtn"></a>
             </div>
             <div class="box-6">
                 <div class="cImg1"></div>
@@ -229,7 +247,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#cardBox1" rel="modal:open"class="mdBoxbtn"></a>
+                        <a href="#cardBox1" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -238,7 +256,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#cardBox2" rel="modal:open"class="mdBoxbtn"></a>
+                        <a href="#cardBox2" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -247,7 +265,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#cardBox3" rel="modal:open"class="mdBoxbtn"></a>
+                        <a href="#cardBox3" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -260,7 +278,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#cardBox4" rel="modal:open"class="mdBoxbtn"></a>
+                        <a href="#cardBox4" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -269,7 +287,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#cardBox5" rel="modal:open"class="mdBoxbtn"></a>
+                        <a href="#cardBox5" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>
@@ -278,7 +296,7 @@
                     <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#cardBox6" rel="modal:open"class="mdBoxbtn"></a>
+                        <a href="#cardBox6" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
             </div>

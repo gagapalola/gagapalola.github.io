@@ -21,7 +21,7 @@
 
 .logoC {
     width: 20vh;
-    height: 20vh;
+    height: 25vh;
     background-size: cover;
     background-image: url("../img/menu.png");
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .logoCov {
     width: 20vh;
-    height: 20vh;
+    height: 25vh;
     background-size: cover;
     background-image: url("../img/menu.png");
     background-repeat: no-repeat;
@@ -41,12 +41,14 @@
     top: calc(50% - 10vh);
     left: calc(50% - 10vh);
     animation: logoAct 2s infinite;
+    cursor: pointer;
+    /* 修改滑鼠游標 */
 }
 
 .logotext {
     position: absolute;
     font-size: 30px;
-    bottom: 30%;
+    bottom: 25%;
     left: calc(50% - 140px);
 }
 
