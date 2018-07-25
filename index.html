@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="css/body-preset.css">
-    <link rel="stylesheet" href="css/nav_menu.css">
-    <link rel="stylesheet" href="css/dropDownMenu.css">
     <link rel="stylesheet" href="css/swiperImg.css">
     <link rel="stylesheet" href="css/door.css">
     <title>F7Days-PlayerSide</title>
@@ -88,6 +86,7 @@
             bottom: 0;
 
         }
+
         .dropdownmenuimg {
             background-image: url("img/logo-white.png");
             background-size: cover;
@@ -95,47 +94,65 @@
             background-position: center;
             width: 400px;
             height: 100px;
-            position: absolute;
+            position: fixed;
+            ;
             left: -60px;
             top: 20px;
             z-index: 3;
+            transition: 1s;
+        }
+
+        .dropdownmenuimgAf {
+            background-image: url("img/menu.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 67px;
+            height: 80px;
+            position: fixed;
+            display: none;
+            left: 112px;
+            top: 30px;
+            z-index: 5;
+            transition: 1s;
             cursor: pointer;
         }
-        .dorpdownul{
-            position: absolute;
-            width: 250px;
+
+        .dorpdownul {
+            position: fixed;
+            width: 400px;
             text-align: center;
             line-height: 80px;
             top: 85px;
-            left: 15px;
+            left: 180px;
             box-sizing: border-box;
             z-index: 2;
+            display: none;
         }
-        .dorpdownlist{
+
+        .dorpdownlist {
             height: 80px;
-            padding: 0 calc((250px - 89.83px)/2);
-            background-color: rgba(0, 255, 0, 0.2);
+            padding: 0 calc((400px - 89.83px)/2);
+            background-color: rgba(0, 0, 0, 0.8);
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        /* .DrListPosition2 {
-            top: 165px;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .DrListPosition3 {
-            top: 245px;
+        .imgw0 {
+            transform: scaleX(0);
         }
-
-        .DrListPosition4 {
-            top: 325px;
+        /* 要同時有兩個CLASS才作用 */
+        .dropdownmenuimgAf.imgmove {
+            animation:move 1s linear 1.5s forwards;
         }
-
-        .DrListPosition5 {
-            top: 405px;
+        @keyframes move{
+            from{
+                left: 112px;
+            }
+            to{
+                left: 180px;
+            }
         }
-
-        .DrListPosition6 {
-            top: 485px;
-        } */
     </style>
 </head>
 
@@ -154,15 +171,16 @@
     </div>
     <!-- Youtube END -->
     <!-- dropdownmenu -->
-        <div class="dropdownmenuimg"></div>
-        <div class="dorpdownul">
-            <a href="" class="dorpdownlist DrListPosition1">dorpdownlist</a>
-            <a href="" class="dorpdownlist DrListPosition2">dorpdownlist</a>
-            <a href="" class="dorpdownlist DrListPosition3">dorpdownlist</a>
-            <a href="" class="dorpdownlist DrListPosition4">dorpdownlist</a>
-            <a href="" class="dorpdownlist DrListPosition5">dorpdownlist</a>
-            <a href="" class="dorpdownlist DrListPosition6">dorpdownlist</a>
-        </div>
+    <div class="dropdownmenuimg"></div>
+    <div class="dropdownmenuimgAf"></div>
+    <div class="dorpdownul">
+        <a href="#cardBox1" rel="modal:open" class="dorpdownlist DrListPosition1">dorpdownlist</a>
+        <a href="#cardBox2" rel="modal:open" class="dorpdownlist DrListPosition2">dorpdownlist</a>
+        <a href="#cardBox3" rel="modal:open" class="dorpdownlist DrListPosition3">dorpdownlist</a>
+        <a href="#cardBox4" rel="modal:open" class="dorpdownlist DrListPosition4">dorpdownlist</a>
+        <a href="#cardBox5" rel="modal:open" class="dorpdownlist DrListPosition5">dorpdownlist</a>
+        <a href="#cardBox6" rel="modal:open" class="dorpdownlist DrListPosition6">dorpdownlist</a>
+    </div>
 
     <!-- 內容 -->
     <div class="gap-h30"></div>
@@ -328,20 +346,6 @@
     <script src="/js/youtube.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
-    <script>
-        $(window).scroll(function () {
-            var winScr = $(window).scrollTop();
-            console.log(winScr);
-
-            if (winScr < 1000) {
-                $(".menu-dropdown").addClass("hide");
-            } else {
-                $(".menu-dropdown").removeClass("hide");
-            }
-
-        });
-    </script>
     <script>
         $(".logoCov").click(function () {
             $(".logoCov").hide();
@@ -360,7 +364,34 @@
 
         });
     </script>
+    <!-- dropdown -->
+    <script>
+        var Youtubeh = $(".embed").height();
+        $(window).scroll(function () {
+            var winScr = $(window).scrollTop();
+            var Youtubeh = $(".embed").height();
+            console.log(Youtubeh);
+            $(".dorpdownul").hide();
+            if (winScr > Youtubeh) {
+                $(".dropdownmenuimg").addClass("imgw0");
+                $(".dropdownmenuimgAf").addClass("imgmove");
+                $(".dropdownmenuimgAf").show();
+               
+            } else {
+                $(".dropdownmenuimg").removeClass("imgw0");
+                $(".dropdownmenuimgAf").hide();
+                $(".dropdownmenuimgAf").removeClass("imgmove");
+                $(".dropdownmenuimgAf").css("transition","initial");
+            }
 
+        });
+        $(".dropdownmenuimgAf").click(function(){
+            $(".dorpdownul").show();
+        });
+        $(".dorpdownlist").click(function(){
+            $(".dorpdownul").hide();
+        });
+    </script>
 
 </body>
 
