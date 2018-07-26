@@ -49,7 +49,6 @@
 
         .cImg1 {
             width: 100%;
-            height: 100%;
         }
 
         .cTitle {
@@ -63,6 +62,7 @@
         .userUI2 {
             overflow: hidden;
             position: relative;
+            overflow: hidden;
         }
 
         .fightUI1 {
@@ -74,16 +74,28 @@
             overflow: hidden;
             position: relative;
             margin-right: 30px;
+            overflow: hidden;
         }
 
         .card {
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
         }
-        .card-body{
-            padding-top: 50px;
-            height: 300px;
+
+        .card-body {
+            padding: 20px 20px;
+
+            height: 200px;
             box-sizing: border-box;
         }
+
+        .card-body>p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         .cardcontain :nth-child(3) {
             padding: 0;
         }
@@ -100,9 +112,17 @@
         .card-img-top {
             width: 100%;
         }
-        .footerImg{
+
+        .footerImg {
             width: 40%;
-    
+
+        }
+        .modal {
+            max-width: 70%;
+        }
+        .MDBoxIframe{
+            width: 100%;
+            height: 80vh;
         }
         .mdBoxbtn {
             background-image: url("img/gogo-click.png");
@@ -291,8 +311,8 @@
                 <div class="card">
                     <img class="card-img-top" src="img/cha_wz.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h1 class="cTitle">遊戲技巧</h1>
-                        <p>剛開始第一周目的你是否有些徬徨呢？戰鬥操作還有各式各樣的系統都與眾不同呢～快來跟著安托老司機來學習一些不可不知的重要遊戲系統吧！</p>
+                        <h1 class="cTitle">角色介紹</h1>
+                        <p>永遠的7日之都有著很多神器使，每位神器使都有特殊的技能和神器，那麼一起來看看神器使圖鑑吧！</p>
                         <a href="#cardBox1" rel="modal:open" class="mdBoxbtn"></a>
                     </div>
                 </div>
@@ -357,20 +377,19 @@
 
     </div>
     <!-- 內容 -->
-    <footer><img class="footerImg" src="img/baha.png" alt=""></footer>
+    <footer>
+    </footer>
 
 
     <!-- MODAL BOX -->
-    <form id="userUIdemo" class="modal">
-        <iframe src="http://dimsemenov.com/plugins/magnific-popup/" frameborder="0"></iframe>
-    </form>
-    <form id="fightUIdemo" class="modal"></form>
-    <form id="cardBox1" class="modal"></form>
-    <form id="cardBox2" class="modal"></form>
-    <form id="cardBox3" class="modal"></form>
-    <form id="cardBox4" class="modal"></form>
-    <form id="cardBox5" class="modal"></form>
-    <form id="cardBox6" class="modal"></form>
+    <form id="userUIdemo" class="modal"><iframe src="http://newgame.17173.com/news/02222017/152957622.shtml" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="fightUIdemo" class="modal"><iframe src="https://www.gamebase.com.tw/news/topic/98987593/" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="cardBox1" class="modal"><iframe src="http://www.paopaoche.net/sj/129685.html" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="cardBox2" class="modal"><iframe src="http://www.paopaoche.net/sj/132159.html" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="cardBox3" class="modal"><iframe src="http://www.paopaoche.net/sj/129585.html" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="cardBox4" class="modal"><iframe src="http://www.sohu.com/a/209847911_483399" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="cardBox5" class="modal"><iframe src="https://game.shouji.com.cn/news/8242.html" frameborder="0" class="MDBoxIframe"></iframe></form>
+    <form id="cardBox6" class="modal"><iframe src="http://www.paopaoche.net/sj/132232_1.html" frameborder="0" class="MDBoxIframe"></iframe></form>
 
 
     <!-- ↓ javascript ↓ -->
@@ -381,8 +400,16 @@
     <script src="/js/youtube.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg=="
-        crossorigin="anonymous"></script>
+    <!-- MODAL BOX -->
+    <script>
+        $(".mdBoxbtn").click(function (event) {
+            $(this).modal({
+                fadeDuration: 250
+            });
+            return false;
+        });
+    </script>
+    <!-- DOOR -->
     <script>
         $(".logoCov").click(function () {
             $(".logoCov").hide();
