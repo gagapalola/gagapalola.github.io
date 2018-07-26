@@ -26,31 +26,28 @@
             width: 100%;
             height: 100%;
         }
-
+        .worldSetImg{
+            width: 100%;
+        }
         .imgCover {
             width: 100%;
-            height: calc(9/16 * 1080px);
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 20% 15%;
             box-sizing: border-box;
+            padding-top: 20%;
             color: white;
+            text-align: center;
             font-size: 20px;
             text-shadow: 1px 1px black;
             float: left;
             overflow: hidden;
+            position: absolute;
+            top: 0;
         }
 
         #swPadd {
             padding: 39px 0;
             box-sizing: border-box;
-        }
-
-        .worldSetImg {
-            width: 100%;
-            height: calc(9/16 * 1080px);
-            background-image: url("img/antoline.jpg");
-            background-size: cover;
-            background-position: center;
         }
 
         .cImg1 {
@@ -190,11 +187,9 @@
 
     <div class="container">
         <div class="gap-h60"></div>
-        <div class="worldSet">
-            <div class="imgCover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis necessitatibus, fugit, sit fugiat
-                beatae veritatis nulla doloremque maiores aspernatur, ex praesentium. Est reiciendis harum totam fugit dolorem
-                a tempore.</div>
-            <div class="worldSetImg"></div>
+        <div class="containerFull">
+            <div class="worldSet"><img class="worldSetImg" src="img/antoline.jpg" alt=""></div>
+                <div class="imgCover">別人的幸福，你的地獄...</div>
         </div>
         <div class="gap-h60"></div>
         <!-- Swiper -->
