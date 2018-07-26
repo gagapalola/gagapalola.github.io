@@ -47,9 +47,6 @@ a{
 }
 .box-6{
 	width: calc(50% - 15px );
-	/* height: 100%; */
-	overflow: hidden;
-	position: relative;
 	box-sizing: border-box;
 }
 .hide{
