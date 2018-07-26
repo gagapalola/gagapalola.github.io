@@ -26,9 +26,11 @@
             width: 100%;
             height: 100%;
         }
-        .worldSetImg{
+
+        .worldSetImg {
             width: 100%;
         }
+
         .imgCover {
             width: 100%;
             height: 100%;
@@ -44,15 +46,26 @@
             position: absolute;
             top: 0;
         }
+
         .cImg1 {
             width: 100%;
             height: 100%;
-            background-size: contain;
-            background-image: url("img/interface.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
         }
-
+        .userUI1{
+            padding-right: 30px;
+        }
+        .fightUI1{
+            padding-right: 30px;
+        }
+        .card{
+            position: relative;
+        }
+        .cardcontain :nth-child(3) {
+            padding: 0;
+        }
+        .cTitle{
+            margin-top: 0;
+        }
         footer {
             background-color: rgba(255, 255, 255, 0.1);
             width: 100%;
@@ -73,7 +86,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             position: absolute;
-            right: 20px;
+            right: 0px;
             bottom: 0;
 
         }
@@ -182,8 +195,10 @@
     <div class="container">
         <div class="gap-h60"></div>
         <div class="containerFull">
-            <div class="worldSet"><img class="worldSetImg" src="img/antoline.jpg" alt=""></div>
-                <div class="imgCover">別人的幸福，你的地獄...</div>
+            <div class="worldSet">
+                <img class="worldSetImg" src="img/antoline.jpg" alt="">
+            </div>
+            <div class="imgCover">別人的幸福，你的地獄...</div>
         </div>
         <div class="gap-h30"></div>
         <!-- Swiper -->
@@ -220,41 +235,37 @@
         <div class="gap-h60"></div>
         <!-- 內容 -->
         <div class="containerFull">
-            <div class="box-6">
-                <div class="cImg1"></div>
+            <div class="box-6 userUI1">
+                <img class="cImg1" src="img/interface.jpg" alt="">
             </div>
-            <div class="box-6">
-                <div class="cText">
-                    <h1 class="cTitle">你再說一次試試看</h1>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
-                    et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
-                </div>
-                <a href="#userUIdemo" rel="modal:open" class="mdBoxbtn"></a>
+            <div class="box-6 userUI2">
+                    <h1 class="cTitle">介面介紹</h1>
+                    <p>一起來了解介面功能，增加對遊戲的掌握度！跟著安托老司機一起來看看巴友的介紹吧！ 一起來了解介面功能，增加對遊戲的掌握度！跟著安托老司機一起來看看巴友的介紹吧！ 一起來了解介面功能，增加對遊戲的掌握度！跟著安托老司機一起來看看巴友的介紹吧！</p>
+                    <a href="#userUIdemo" rel="modal:open" class="mdBoxbtn"></a>
             </div>
-            <div class="clear"></div>
+            
+            
         </div>
 
         <div class="gap-h30"></div>
 
         <div class="containerFull">
-            <div class="box-6">
-                <div class="cText">
+            <div class="box-6 fightUI1">
+                <img class="cImg1" src="img/fight.png" alt="">
+            </div>
+            <div class="box-6 fightUI2">
                     <h1 class="cTitle">你再說一次試試看</h1>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas deserunt facere repellendus voluptatem, corporis
-                    et incidunt esse corrupti ullam nihil dolor ratione ipsum perspiciatis error qui recusandae odit? Rerum?
-                </div>
-                <a href="#fightUIdemo" rel="modal:open" class="mdBoxbtn"></a>
-            </div>
-            <div class="box-6">
-                <div class="cImg1"></div>
+                    et inciduntessecorruptiullamnihildolorrationeipsumperspiciatiserrorquirecusandae odit? Rerum?
+                    <a href="#fightUIdemo" rel="modal:open" class="mdBoxbtn"></a>
             </div>
             <div class="clear"></div>
         </div>
         <div class="gap-h60"></div>
-        <div class="containerFull">
+        <div class="containerFull cardcontain">
             <div class="box-4">
                 <div class="card">
-                    <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/cha_wz.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#cardBox1" rel="modal:open" class="mdBoxbtn"></a>
@@ -263,7 +274,7 @@
             </div>
             <div class="box-4">
                 <div class="card">
-                    <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/getcha.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#cardBox2" rel="modal:open" class="mdBoxbtn"></a>
@@ -272,7 +283,7 @@
             </div>
             <div class="box-4">
                 <div class="card">
-                    <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/chitem.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#cardBox3" rel="modal:open" class="mdBoxbtn"></a>
@@ -282,10 +293,10 @@
             <div class="clear"></div>
         </div>
         <div class="gap-h30"></div>
-        <div class="containerFull">
+        <div class="containerFull cardcontain">
             <div class="box-4">
                 <div class="card">
-                    <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/star.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#cardBox4" rel="modal:open" class="mdBoxbtn"></a>
@@ -294,7 +305,7 @@
             </div>
             <div class="box-4">
                 <div class="card">
-                    <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/item.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#cardBox5" rel="modal:open" class="mdBoxbtn"></a>
@@ -303,7 +314,7 @@
             </div>
             <div class="box-4">
                 <div class="card">
-                    <img class="card-img-top" src="img/gogo.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/heroline-card.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#cardBox6" rel="modal:open" class="mdBoxbtn"></a>
@@ -320,7 +331,9 @@
 
 
     <!-- MODAL BOX -->
-    <form id="userUIdemo" class="modal"><iframe src="http://dimsemenov.com/plugins/magnific-popup/" frameborder="0"></iframe></form>
+    <form id="userUIdemo" class="modal">
+        <iframe src="http://dimsemenov.com/plugins/magnific-popup/" frameborder="0"></iframe>
+    </form>
     <form id="fightUIdemo" class="modal"></form>
     <form id="cardBox1" class="modal"></form>
     <form id="cardBox2" class="modal"></form>
@@ -338,7 +351,8 @@
     <script src="/js/youtube.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg=="
+        crossorigin="anonymous"></script>
     <script>
         $(".logoCov").click(function () {
             $(".logoCov").hide();
